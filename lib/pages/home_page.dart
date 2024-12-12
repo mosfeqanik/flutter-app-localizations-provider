@@ -47,8 +47,8 @@ class HomePage extends StatelessWidget {
                             height: 1,
                           ),
                           dropdownColor: Colors.indigo,
-                          onChanged: (String newValue) {
-                            currentData.changeLocale(newValue);
+                          onChanged: (String? newValue) {
+                            currentData.changeLocale(newValue!);
                           },
                           items: defaultData.languagesListDefault
                               .map<DropdownMenuItem<String>>(
@@ -67,7 +67,7 @@ class HomePage extends StatelessWidget {
               ),
               SizedBox(height: 30),
               Text(
-                AppLocalization.of(context).translate('hello-world'),
+                AppLocalization.of(context)!.translate('hello-world'),
                 style: TextStyle(color: Colors.indigo, fontSize: 30),
               ),
             ],

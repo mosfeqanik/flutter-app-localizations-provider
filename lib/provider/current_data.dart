@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import '../helpers/language_helper.dart';
 
 class CurrentData with ChangeNotifier {
-  String currentLanguage;
-  Locale locale;
+  String? currentLanguage;
+  Locale? locale;
 
   LanguageHelper languageHelper = LanguageHelper();
 
-  Locale get getlocale => locale;
+  Locale? get getlocale => locale;
 
   void changeLocale(String newLocale) {
     Locale convertedLocale;
@@ -20,7 +20,7 @@ class CurrentData with ChangeNotifier {
   }
 
   defineCurrentLanguage(context) {
-    String definedCurrentLanguage;
+    String? definedCurrentLanguage;
 
     if (currentLanguage != null)
       definedCurrentLanguage = currentLanguage;

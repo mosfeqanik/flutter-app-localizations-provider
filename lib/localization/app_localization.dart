@@ -8,7 +8,7 @@ class AppLocalization {
 
   final Locale locale;
 
-  static AppLocalization of(BuildContext context) {
+  static AppLocalization? of(BuildContext context) {
     return Localizations.of<AppLocalization>(context, AppLocalization);
   }
 
@@ -28,7 +28,7 @@ class AppLocalization {
   };
 
   String translate(String key) {
-    return _localizedValues[locale.languageCode][key] ?? '** $key not found';
+    return _localizedValues[locale.languageCode]?[key] ?? '** $key not found';
   }
 }
 
